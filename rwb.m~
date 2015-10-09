@@ -1,0 +1,17 @@
+function c = rwb(n)
+
+J = [
+ 1 0 0
+ 1 1 1
+ 0 0 1
+];
+
+J = flipdim(J,1);
+J_up = zeros(n,3);
+
+
+for k = 1:3
+J_up(:,k) = interp1(J(:,k),linspace(1,length(J),n));
+end
+
+J = J_up;
