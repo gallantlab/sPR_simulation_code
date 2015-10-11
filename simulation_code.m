@@ -157,11 +157,11 @@ for figNumber = 3:6
     clim = [-5 5];
     if length(m_scales) > 1
         h=figure; subplot(1,2,2)
-        imagesc(mean(t_est1,3)); caxis(clim); colormap(rwb(256)); colorbar
+        imagesc(t_est1); caxis(clim); colormap(rwb(256)); colorbar
         set(gca,'YTick',ind,'YTickLabel',p_scales(ind)./p_sig,'XTick',ind,'XTickLabel',m_scales(ind)./m_sig)
         ylabel('phase fSNR'); xlabel('magnitude fSNR'); title('PR-OLS'); axis square
         subplot(1,2,1);
-        imagesc(mean(t_est3,3)); caxis(clim); colormap(rwb(256)); colorbar
+        imagesc(t_est3); caxis(clim); colormap(rwb(256)); colorbar
         set(gca,'YTick',ind,'YTickLabel',p_scales(ind)./p_sig,'XTick',ind,'XTickLabel',m_scales(ind)./m_sig)
         ylabel('phase fSNR'); xlabel('magnitude fSNR'); title('PR-ChiSq'); axis square
     end
