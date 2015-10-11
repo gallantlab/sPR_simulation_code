@@ -32,6 +32,7 @@ for figNumber = 3:6
             m_scales = 0;
             p_scales = .5;
         case 6
+            % Note: this figure takes a while to generate. 
             m_scales = 0:.01:1;
             p_scales = 0:.01:1;
     end
